@@ -1,0 +1,69 @@
+export const tool={
+  "id": "E094",
+  "slug": "eng-nernst-potential",
+  "title": "네른스트 전위 계산기",
+  "title_en": "Nernst Potential Calculator",
+  "category": "화학",
+  "category_en": "Chemistry",
+  "fields": [
+    {
+      "key": "e0",
+      "label": "같은 반응의 표준전위 E°",
+      "label_en": "Standard potential E° for the same reaction",
+      "dimension": "voltage",
+      "example": 0,
+      "constraint": "signed",
+      "display_unit": "V",
+      "display_value": "0"
+    },
+    {
+      "key": "t",
+      "label": "절대온도 T",
+      "label_en": "Absolute temperature T",
+      "dimension": "temperature",
+      "example": 298.15,
+      "constraint": "positive",
+      "display_unit": "K",
+      "display_value": "298.15"
+    },
+    {
+      "key": "n",
+      "label": "반응 전자수 n",
+      "label_en": "Electron count n",
+      "dimension": "ratio",
+      "example": 1,
+      "constraint": "integer",
+      "display_unit": "1",
+      "display_value": "1"
+    },
+    {
+      "key": "q",
+      "label": "무차원 반응지수 Q",
+      "label_en": "Dimensionless reaction quotient Q",
+      "dimension": "ratio",
+      "example": 10,
+      "constraint": "positive",
+      "display_unit": "1",
+      "display_value": "10"
+    }
+  ],
+  "result_label": "반응 전위 E",
+  "result_label_en": "Reaction potential E",
+  "result_dimension": "voltage",
+  "formula": "E = E° − RT lnQ/(nF)",
+  "purpose": "명시한 반응지수와 온도로 평형 전극·전지 전위 계산",
+  "purpose_en": "Calculate an equilibrium potential for a specified reaction quotient and temperature.",
+  "assumptions": "T,Q>0, n은 양의 정수. E°와 Q는 동일 방향 반응·기준을 사용하고 Q는 활동도 기반 무차원 값이다. 전류 부하·과전압·내부저항·임의 농도지수 산정은 제외한다.",
+  "assumptions_en": "Required: positive T,Q and positive integer n. E° and Q refer to the same reaction direction and reference; Q is dimensionless and activity based. Current loading, overpotential, internal resistance and automatic Q estimation are excluded.",
+  "sources": [
+    {
+      "label": "OpenStax · Nernst equation",
+      "url": "https://openstax.org/books/chemistry-2e/pages/17-4-potential-free-energy-and-equilibrium"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "site": "https://nanalab.kr/eng-nernst-potential/",
+  "repository": "https://github.com/NaNaCompany/eng-nernst-potential",
+  "output_unit": "V"
+};
